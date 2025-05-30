@@ -1,6 +1,5 @@
 function logout(){
-	
-	if (confirm("ログアウトしますがよろしいですか？"))
+	confirm("ログアウトしますがよろしいですか？")
 	fetch('logout',{
 		method: "POST",
 	})
@@ -11,6 +10,5 @@ function logout(){
 		else{
 			alert("正常にログアウトできませんでした")
 		}
-		
 	})
 }

@@ -12,6 +12,7 @@ public class UtilityTools {
 	public static final String LOGIN_ERROR = "ログインに失敗しました。メールアドレスかパスワードを間違えています。再度入力してください。";
 	public static final String DATA_FETCH_ERROR = "データの取得に失敗しました";
 	public static final String SESSION_ERROR = "セッションが切れました。再度ログインしてください。";
+	public static final String SIGNUP_ERROR = "アカウントの作成に失敗しました。";
 	
 	/**
 	 * 指定されたファイルパスの内容を読み込み、文字列として返します。

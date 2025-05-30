@@ -227,4 +227,40 @@ public class TaskManagementDAO {
 		}
 		return false;
 	}
+	
+	// ユーザ情報の登録を行う
+	public boolean insUserInfo(String name, String mail, String password) {
+		ConnectionManger connectionManager = new ConnectionManger(_url, _User, _Password);
+		try(Connection con = connectionManager.getConnection();)
+		{
+			String query = UtilityTools.readFile("/sql/insertUserInfo.sql");
+			
+			if (query == null) {
+				System.out.println("SQLファイルの読み込みに失敗しました。");
+				return false;
+			}
+			
+			PreparedStatement pstmt = con.prepareStatement(query);
+			
+			pstmt.setString(1, name);
+			pstmt.setString(2, mail);
+			pstmt.setString(3, password);
+			
+			int result = pstmt.executeUpdate();
+			
+			if (result > 0) {
+				return true;
+			}
+			
+			con.close();
+		}
+		catch(Exception e) 
+		{
+			e.printStackTrace();
+			System.out.println("データ登録失敗");
+			return false;
+		}
+		return false;
+		
+	}
 }

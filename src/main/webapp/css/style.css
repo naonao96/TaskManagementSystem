@@ -3,6 +3,15 @@ body {
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
 }
+body.sign-in-locate{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 300px;
+	align-content: space-around;
+	align-items: center;
+	margin: auto;
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -22,19 +31,18 @@ h2.login-title{
 	justify-content: center;
 	font-weight: 900;
 	font-size: 30px;
+	width: 300px;
 }
 .menu-title{
 	font-weight: 900;
 	font-size: 30px;
 }
 .error {
+	display: flex;
+	justify-content: center;
 	color: red;
 	font-weight: bold;
-}
-.sign-in-locate{
-	justify-content: space-around;
-	align-content: space-around;
-	align-items: center;
+	font-size: 15px;
 }
 .sign-out-locate{
 	justify-content: right;
@@ -98,6 +106,7 @@ h2.login-title{
 	background-color: #0066CC;
 	border: 2px solid #0066CC;
 	margin-top: 50px;
+	margin-bottom: 50px;
 	height: 40px;
 	border-radius: .2rem;
 }
@@ -113,10 +122,11 @@ h2.login-title{
 	margin-bottom: 10px;
 	border-radius: .2rem;
 }
-.sign-in-locate, .sign-out-locate{
+.sign-out-locate{
 	display: flex;
+	flex-wrap: wrap;
+	flex-basis: 300px;
 	padding: 10px;
-	box-lines: single;
 }
 .btn-right-design, .btn-left-design, .login-btn{
 	color: white;
